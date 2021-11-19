@@ -1,27 +1,34 @@
-import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
+import React, { useState } from "react";
 import "./Header.css";
+import { NavLinks } from "./NavLinks";
 
 const Header = () => {
-  return (
-    // <nav className="navbar">
-    //   <h1>Jesse Erickson</h1>
-    //   <ul>
-    //     <li>Home</li>
-    //     <li>Portfolio</li>
-    //     <li>Contact</li>
-    //     <li>Resume</li>
-    //     <li>Random</li>
-    //   </ul>
-    // </nav>
+  const [clicked, setClicked] = useState();
 
-    <Navbar bg="light" expand="lg" sticky="top">
-      <Container>
-        <Navbar.Brand>Jesse Erickson</Navbar.Brand>
-      </Container>
-    </Navbar>
+  const handleClick = (e) => {
+    // e.preventDefault();
+    setClicked(!clicked);
+    console.log("event ", e);
+  };
+
+  return (
+    <nav className="navbar">
+      <h1 className="headerTitle"> Jesse Erickson</h1>
+      <div className="menuIcon" onClick={handleClick}>
+        <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+      </div>
+      <ul className={clicked ? "navMenu active" : "navMenu"}>
+        {NavLinks.map((link, index) => {
+          return (
+            <li key={index}>
+              <a className={link.className} href={link.url}>
+                {link.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 
