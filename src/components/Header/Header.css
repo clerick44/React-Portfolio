@@ -31,8 +31,14 @@
   padding: 0.5rem 1rem;
 }
 
+.navLinkActive {
+  color: crimson;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
 .navLinks:hover {
-  background-color: cadetblue;
+  background-color: #444;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -76,7 +82,7 @@
   }
 
   .navLinks:hover {
-    background: color #000;
+    background-color: cadetblue;
     border-radius: 0;
   }
 

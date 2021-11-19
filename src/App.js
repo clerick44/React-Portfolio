@@ -14,6 +14,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState("Home");
 
   const renderPage = () => {
+    console.log("************** in RENDERPAGE ************");
     if (currentPage === "Home") {
       return <Home />;
     }
@@ -29,11 +30,14 @@ function App() {
     return <Random />;
   };
 
-  const handlePageChange = (page) => setCurrentPage(page);
+  // const handlePageChange = (page) => {
+  //   console.log("in handlePageChange");
+  //   setCurrentPage(page);
+  // };
 
   return (
     <>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       {renderPage()}
       <Footer />
     </>
