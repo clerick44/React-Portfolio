@@ -1,6 +1,7 @@
 .navbar {
   height: 100px;
   background-color: cadetblue;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,10 +51,6 @@
 /* mobile settings */
 
 @media screen and (max-width: 925px) {
-  .navbar {
-    position: relative;
-  }
-
   .navMenu {
     display: flex;
     flex-direction: column;
