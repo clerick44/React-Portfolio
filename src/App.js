@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar"
+// import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Resume from "./components/Resume/Resume";
@@ -37,9 +38,9 @@ function App() {
 
   return (
     <>
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {/* <Header currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
       {renderPage()}
-      <Footer />
+      <Navbar />
     </>
   );
 }
