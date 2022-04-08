@@ -1,9 +1,41 @@
 #navbar {
-    z-index: 100;
+    align-items: center;
     position: fixed;
-    width: 100vw;
-    height: 10%;
-    left: 0;
-    bottom: 0;
-    
+    right: 30px;
+    top: 50%;
+    color: aliceblue;
+    background-color: aqua;
+
+
 }
+
+@media (max-width: 989px) {
+
+    #navbar {
+        width: 100vw;
+        height: 10%;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        top: auto;
+        background-color: #252525;
+        }
+}
+
+
+
+
+
+
+/* #navbar {
+        /* z-index: 100; */
+        /* position: fixed; */
+        /* right: 10px; */
+        /* width:fit-content; */
+        /* top: 50%; */
+        /* background-color: #252525; */
+        /* background-color: aqua; */
+
+    /* } */
+
+ 
